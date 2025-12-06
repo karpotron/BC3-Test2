@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BC3 Reader (Web PWA) - Improved Parser</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>BC3 Reader — Web (Mejorado)</h1>
+  <p class="subtitle">Sube archivos <code>.bc3</code> desde tu iPhone (Archivos) y explora capítulos → partidas → mediciones</p>
+</header>
+<main>
+  <section id="controls">
+    <input id="fileInput" type="file" accept=".bc3,application/octet-stream" />
+    <button id="exampleBtn">Mostrar árbol</button>
+    <div id="status"></div>
+  </section>
+  <section id="tree" class="hidden">
+    <div id="summary"></div>
+    <div id="treeContainer"></div>
+  </section>
+  <section id="detail" class="hidden">
+    <button id="backTree">← Volver</button>
+    <div id="detailContent"></div>
+    <div style="padding:12px"><button id="exportCsv" class="button">Exportar CSV de partidas</button></div>
+  </section>
+</main>
+<footer>
+  <p>Instala en tu iPhone: <strong>Añadir a pantalla de inicio</strong> (Safari) — funciona offline tras cargar una vez.</p>
+</footer>
+<script src="app_improved.js"></script>
+</body>
+</html>
